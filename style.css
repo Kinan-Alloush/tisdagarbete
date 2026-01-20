@@ -1,0 +1,120 @@
+/* Grundinställningar */
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #1f2937;
+  transition: background 0.3s, color 0.3s;
+}
+ 
+.site-header {
+  padding: 24px 16px;
+  background: #111827;
+  color: #ffffff;
+  text-align: center;
+}
+ 
+.subtitle {
+  margin: 8px 0 0;
+  opacity: 0.9;
+}
+ 
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+ 
+  /* Enkel layout med Grid */
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+ 
+.card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+ 
+.hero-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+ 
+/* Länk + hover-effekt */
+.link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: bold;
+}
+ 
+.link:hover {
+  text-decoration: underline;
+}
+ 
+/* Knapp + hover-effekt */
+.btn {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+ 
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+ 
+.btn-secondary {
+  background: #16a34a;
+}
+ 
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 18px 10px;
+  color: #6b7280;
+}
+ 
+/* Tema som JS kan slå på */
+.dark-theme {
+  background: #0b1220;
+  color: #e5e7eb;
+}
+ 
+.dark-theme .card {
+  background: #111827;
+  border-color: #1f2937;
+}
+ 
+.dark-theme .site-header {
+  background: #0a0f1a;
+}
+ 
+.dark-theme .link {
+  color: #93c5fd;
+}
+ 
+/* Gör layouten 2 kolumner på större skärmar */
+@media (min-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+ 
+  .card:last-child {
+    grid-column: span 2;
+  }
+}
